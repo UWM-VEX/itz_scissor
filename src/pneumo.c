@@ -1,7 +1,11 @@
 void pneumoSet(int open, int closed, int up int down)
 {
-  motorSet(5, open);
-  motorSet(5, closed);
-  motorSet(6, up);
-  motorSet(6, down);
+  if (open)
+  digitalWrite(5, HIGH);
+  else if (closed)
+  digitalWrite(5, LOW);
+  else if (up)
+  digitalWrite(6, HIGH);
+  else (down)
+  digitalWrite(6, LOW);
 }

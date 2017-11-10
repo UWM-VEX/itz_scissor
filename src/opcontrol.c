@@ -33,11 +33,12 @@
  */
 void operatorControl() {
 	while (1) {
-	liftSet(joystickGetAnalog(1,1));
+	liftSet(joystickGetAnalog(1,3));
 	clawSet(joystickGetAnalog(1,2));
-	chassisSet(joystickGetAnalog(1,3), joystickGetAnalog(1,4));
-	turretSet(joystickGetAnalog(1,5));
-	pneumoSet(joystickGetDigital(1,6), joystickGetDigital(1.7), joystickGetDigitcal(1,8), joystickGetDigital(1.9));
-		delay(20);
+	chassisSet(joystickGetAnalog(2,3), joystickGetAnalog(2,2));
+	turretSet(joystickGetAnalog(1,1));
+	pneumoSet(joystickGetDigital(1,5, JOY_UP), joystickGetDigital(1,5, JOY_DOWN), joystickGetDigitcal(1,6, JOY_UP), joystickGetDigital(1,6, JOY_DOWN));
+
+	delay(20);
 	}
 }
